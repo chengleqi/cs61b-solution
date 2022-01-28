@@ -5,7 +5,7 @@ public class Planet {
 	public double yyVel;
 	public double mass;
 	public String imgFileName;
-	public static final double G = 6.67e-11;
+	private static final double G = 6.67e-11;
 
 	public Planet(double xP, double yP, double xV, double yV, double m, String img) {
 		xxPos = xP;
@@ -50,7 +50,7 @@ public class Planet {
 		return 0;
 	}
 
-	public boolean equals(Planet p) {
+	private boolean equals(Planet p) {
 		return xxPos == p.xxPos && yyPos == p.yyPos && xxVel == p.xxVel && yyVel == p.yyVel && imgFileName == p.imgFileName;
 	}
 

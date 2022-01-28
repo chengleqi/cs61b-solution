@@ -1,5 +1,5 @@
 public class NBody {
-    public static String backgroundPic = "images/starfield.jpg";
+    private static String backgroundPic = "images/starfield.jpg";
     
     public static double readRadius(String filePath) {
         In in = new In(filePath);
@@ -25,7 +25,7 @@ public class NBody {
         return planets;
     }
 
-    public static void drawBackground(double scale) {
+    private static void drawBackground(double scale) {
 		StdDraw.setScale(-scale, scale);
         StdDraw.picture(0, 0, backgroundPic);
 	}
